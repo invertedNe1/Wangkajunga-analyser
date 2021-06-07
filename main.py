@@ -1,4 +1,5 @@
-
+# hfst-lookup src/analyser-gt-desc.hfstol < ~/Desktop/test_w_words | cut -f2 > ~/Desktop/test_w_words_output
+# hfst-lookup src/analyser-gt-desc.hfstol < /home/hoopdriver/PycharmProjects/Wangkajunga_analysis/text_files/forms | cut -f2 > /home/hoopdriver/PycharmProjects/Wangkajunga_analysis/text_files/forms_outputs
 from os import path
 import subprocess
 import sys
@@ -47,7 +48,7 @@ def split_tags(gold_standard):
                         if temp_tag in marker_list_no_plus:
                             properly_split_gold_standard.append(temp_tag)
                             count += 1
-                        else:
+                        else:  # error message, hopefully with some useful info
                             print("temp_tag: " + temp_tag + " not in marker_list... " + form + " " + gold_standard)
                             continue
         elif (length - count) > 2:
@@ -127,7 +128,6 @@ if __name__ == '__main__':
             line = f.readline()
             translation = line.strip()
             word_entries.append([form, lemma, tag, num_markers, properly_split_gold_standard, translation, gold_standard])
-            # could have empty array - later filled with list of outputs generated with form
         else:
             pass
     # for marker in temp_list_possible_markers:
@@ -138,26 +138,14 @@ if __name__ == '__main__':
 
     # print(len(word_entries))
     for item in word_entries:
-    #     pass
-         print(item[0])
+        pass
+    #      print(item[0])
 
     # write the form elements of word_entries to a new file "forms"
     g = open("text_files//forms", 'w')
     for item in word_entries:
         g.write(item[0] + '\n')
     g.close()
-
-    # bashCommand = "hfst-lookup src/analyser-gt-desc.hfstol < ~/Desktop/test_w_words | cut -f2 > ~/Desktop/test_w_words_output"
-    # process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-    #output, error = process.communicate()
-
-    # pipe file "forms" into morphology analyser and write output to a new file "forms_outputs"
-    # command = subprocess.run(['cd', 'Documents/github_projects/lang_mpj/'])
-    # command = subprocess.run(['ls', '-l'], capture_output=True)
-    # sys.stdout.buffer.write(command.stdout)
-    # sys.stderr.buffer.write(command.stderr)
-    # sys.exit(command.returncode)
-    # hfst-lookup src/analyser-gt-desc.hfstol < ~/Desktop/test_w_words | cut -f2 > ~/Desktop/test_w_words_output
 
     # add outputs in file "forms_outputs" to new array
     h = open("text_files//forms_outputs", 'r')
@@ -175,6 +163,7 @@ if __name__ == '__main__':
     #     print(len(item))
 
     # analysis
+    # initialise variables that will be used for statistics
     total = 0
     total_correct = 0
     total_overgeneration = 0
@@ -218,7 +207,11 @@ if __name__ == '__main__':
     eng_or_creole_correct = 0
     eng_or_creole_overgeneration = 0
     eng_or_creole_overgeneration_correct = 0
+    incorrect_number_affixes = 0
+    incorrect_number_correctly_guessed_affixes = 0
+    incorrect_overgeneration_guessed_affixes = 0
 
+    new_list = []  # stores 'most_correct' forms for incorrect words
     for word, outputs in zip(word_entries, word_outputs):
         total += 1
         total_overgeneration += len(outputs)
@@ -253,16 +246,27 @@ if __name__ == '__main__':
         elif word[2] is None:
             eng_or_creole_total += 1
             eng_or_creole_overgeneration += len(outputs)
+
         correct = False  # tracker to see if there is a matching form
         most_correct_output_so_far = None
+        most_correct_num_correct_tags = 0
+        most_correct_num_total_tags = 0
+        total_tags = len(word[6])
         for output in outputs:
             split_output, lemma, tag = split_tags(output)
             correct_tags = 0
-            total_tags = len(word[6])
             total_output_tags = len(split_output)
             for tag in split_output:
                 if tag in word[6]:
                     correct_tags += 1
+            if correct_tags > most_correct_num_correct_tags:
+                most_correct_num_tags = correct_tags
+                most_correct_output_so_far = output
+                most_correct_num_total_tags = total_output_tags
+            if correct_tags == most_correct_num_correct_tags and total_output_tags < most_correct_num_total_tags:
+                most_correct_num_tags = correct_tags
+                most_correct_output_so_far = output
+                most_correct_num_total_tags = total_output_tags
             if output == word[6]:
                 correct = True
                 total_correct += 1
@@ -291,12 +295,15 @@ if __name__ == '__main__':
                 elif word[2] is None:
                     eng_or_creole_correct += 1
                     eng_or_creole_overgeneration_correct += len(outputs)
+                continue
             else:
                 pass
                 # if word[2] == 'Dem':
                 #     print("no matching forms for: " + word[0] + "\t" + word[6] + '\t' + output)
         if not correct:
-            pass
+            incorrect_number_affixes += total_tags
+            incorrect_number_correctly_guessed_affixes += most_correct_num_correct_tags
+            incorrect_overgeneration_guessed_affixes += most_correct_num_total_tags
             print("no matching forms for: " + word[0] + '\t' + word[6])
     # # print analysis
     print('total: ' + str(total))
@@ -342,3 +349,5 @@ if __name__ == '__main__':
     print('eng or creole correct: ' + str(eng_or_creole_correct) + '\t' + '(' + str(round(eng_or_creole_correct/eng_or_creole_total*100, 2)) + '%)')
     print('eng or creole overgeneration: ' + str(round(eng_or_creole_overgeneration/eng_or_creole_total, 2)))
     print('eng or creole overgeneration correct: ' + str(round(eng_or_creole_overgeneration_correct/eng_or_creole_correct, 2)))
+    print('percent correctly guessed affixes of most-correct incorrect form: ' + str(round(incorrect_number_correctly_guessed_affixes / incorrect_number_affixes*100, 2)))
+    print('avg overgeneration of most-correct incorrect forms: ' + str(round(incorrect_overgeneration_guessed_affixes / incorrect_number_affixes*100, 2)))
