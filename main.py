@@ -211,6 +211,7 @@ if __name__ == '__main__':
     incorrect_number_correctly_guessed_affixes = 0
     incorrect_overgeneration_guessed_affixes = 0
 
+    most_correct_form_matchable_count = 0
     new_list = []  # stores 'most_correct' forms for incorrect words
     for word, outputs in zip(word_entries, word_outputs):
         total += 1
@@ -251,20 +252,20 @@ if __name__ == '__main__':
         most_correct_output_so_far = None
         most_correct_num_correct_tags = 0
         most_correct_num_total_tags = 0
-        total_tags = len(word[6])
+        total_tags = len(word[4])
         for output in outputs:
             split_output, lemma, tag = split_tags(output)
             correct_tags = 0
             total_output_tags = len(split_output)
             for tag in split_output:
-                if tag in word[6]:
+                if tag in word[4]:
                     correct_tags += 1
             if correct_tags > most_correct_num_correct_tags:
-                most_correct_num_tags = correct_tags
+                most_correct_num_correct_tags = correct_tags
                 most_correct_output_so_far = output
                 most_correct_num_total_tags = total_output_tags
-            if correct_tags == most_correct_num_correct_tags and total_output_tags < most_correct_num_total_tags:
-                most_correct_num_tags = correct_tags
+            elif correct_tags == most_correct_num_correct_tags and total_output_tags < most_correct_num_total_tags:
+                most_correct_num_correct_tags = correct_tags
                 most_correct_output_so_far = output
                 most_correct_num_total_tags = total_output_tags
             if output == word[6]:
@@ -300,7 +301,8 @@ if __name__ == '__main__':
                 pass
                 # if word[2] == 'Dem':
                 #     print("no matching forms for: " + word[0] + "\t" + word[6] + '\t' + output)
-        if not correct:
+        if not correct and most_correct_num_correct_tags > 0:
+            most_correct_form_matchable_count += 1
             incorrect_number_affixes += total_tags
             incorrect_number_correctly_guessed_affixes += most_correct_num_correct_tags
             incorrect_overgeneration_guessed_affixes += most_correct_num_total_tags
@@ -351,3 +353,7 @@ if __name__ == '__main__':
     print('eng or creole overgeneration correct: ' + str(round(eng_or_creole_overgeneration_correct/eng_or_creole_correct, 2)))
     print('percent correctly guessed affixes of most-correct incorrect form: ' + str(round(incorrect_number_correctly_guessed_affixes / incorrect_number_affixes*100, 2)))
     print('avg overgeneration of most-correct incorrect forms: ' + str(round(incorrect_overgeneration_guessed_affixes / incorrect_number_affixes*100, 2)))
+    print('incorrect number correctly guessed affixes: ' + str(incorrect_number_correctly_guessed_affixes))
+    print('incorrect number affixes: ' + str(incorrect_number_affixes))
+    print('incorrect overgeneration guessed affixes: ' + str(incorrect_overgeneration_guessed_affixes))
+    print('most correct matchable forms: ' + str(most_correct_form_matchable_count))

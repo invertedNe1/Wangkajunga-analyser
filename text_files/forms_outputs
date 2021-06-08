@@ -2025,7 +2025,7 @@ you
 
 know
 
-before+?
+before
 
 langtaim
 
@@ -2536,6 +2536,14 @@ trailer+N+Pron/Clt+3Sg+Abs
 trailer+N+Pron/Clt+3Sg+Subj
 trailer+N+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
+ngapi+N+Gen
+ngapi+N+Gen+Abs
+ngapi+N+Gen+Abs+Pron/Clt+3Sg+Abs
+ngapi+N+Gen+Abs+Pron/Clt+3Sg+Subj
+ngapi+N+Gen+Abs+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
+ngapi+N+Gen+Pron/Clt+3Sg+Abs
+ngapi+N+Gen+Pron/Clt+3Sg+Subj
+ngapi+N+Gen+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 ngapi+N+Dat+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Dat
 ngapi+N+Dat+Pron/Clt+3Sg+Dat
 ngapi+N+Dat+Pron/Clt+3Sg+Dat+Pron/Clt+3Sg+Abs
@@ -2608,7 +2616,7 @@ nyarra+Dem+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 not
 
-our+?
+our
 
 roadhouse+N
 roadhouse+N+Abs
@@ -2619,9 +2627,9 @@ roadhouse+N+Pron/Clt+3Sg+Abs
 roadhouse+N+Pron/Clt+3Sg+Subj
 roadhouse+N+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
-another+?
+another
 
-one+?
+one
 
 kakarra+N+Der/Anoth
 
@@ -2842,7 +2850,7 @@ toyota+N+Loc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 palunyakurnungka+?
 
-ah+?
+ah+Interj
 
 palunjanu+Pcle+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Acs
 palunjanu+Pcle+Pron/Clt+3Sg+Acs
@@ -3076,7 +3084,7 @@ Mary+N+Prop+Sem/Fem+Pron/Clt+3Sg+Abs
 Mary+N+Prop+Sem/Fem+Pron/Clt+3Sg+Subj
 Mary+N+Prop+Sem/Fem+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
-from+?
+from
 
 Jukurirri+N+Prop+Sem/Plc
 Jukurirri+N+Prop+Sem/Plc+Abs
@@ -3203,6 +3211,14 @@ Charlene+N+Prop+Sem/Fem+Pron/Clt+3Sg+Abs
 Charlene+N+Prop+Sem/Fem+Pron/Clt+3Sg+Subj
 Charlene+N+Prop+Sem/Fem+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
+Jukuna+N+Prop+Gen
+Jukuna+N+Prop+Gen+Abs
+Jukuna+N+Prop+Gen+Abs+Pron/Clt+3Sg+Abs
+Jukuna+N+Prop+Gen+Abs+Pron/Clt+3Sg+Subj
+Jukuna+N+Prop+Gen+Abs+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
+Jukuna+N+Prop+Gen+Pron/Clt+3Sg+Abs
+Jukuna+N+Prop+Gen+Pron/Clt+3Sg+Subj
+Jukuna+N+Prop+Gen+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 Jukuna+N+Prop+Dat+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Dat
 Jukuna+N+Prop+Dat+Pron/Clt+3Sg+Dat
 Jukuna+N+Prop+Dat+Pron/Clt+3Sg+Dat+Pron/Clt+3Sg+Abs
@@ -3634,3 +3650,4 @@ maral+N+Clt/Dub
 maral+N+Clt/Dub+Pron/Clt+3Sg+Abs
 maral+N+Clt/Dub+Pron/Clt+3Sg+Subj
 maral+N+Clt/Dub+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
+

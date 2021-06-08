@@ -366,7 +366,7 @@ ahh+Interj
 hesitation
 
 pangarnu
-pargarnu+N
+pangarnu+N
 ---
 large goanna
 
@@ -591,7 +591,7 @@ kamu+CC
 and
 
 minyawu
-minaywu+N
+minyawu+N
 ---
 cat
 
@@ -601,7 +601,7 @@ kamu+CC
 and
 
 pujikatu
-pukikatu+N
+pujikatu+N
 ---
 cat
 
@@ -1123,9 +1123,9 @@ wanin+V+TV+Imperf+Pst
 cut
 
 mean
-means
----
 mean
+---
+means
 
 deibin
 deibin
@@ -1243,7 +1243,7 @@ katimbat
 cutting(K)
 
 jiinaya
-jii+Dem+Clt/Foc+Pron/Clt+3Pl+Subj
+jii+Dem+Dem/na+Pron/Clt+3Pl+Subj
 ---
 that
 
@@ -1558,7 +1558,7 @@ Michael+N+Prop+Sem/Mal+Dat
 Michael
 
 yangkangulawu
-yangka+Dem+Dem/ngula+Clt/Emph
+yangka+Dem+Dem/ngula+Voc
 ---
 that known
 
@@ -1773,7 +1773,7 @@ an+CC
 and
 
 purtulaju
-purtu+N+Pron/Clt+1Pl+Excl+Subj
+purtu+Pcle+Pron/Clt+1Pl+Excl+Subj
 ---
 in vain
 
@@ -1783,7 +1783,7 @@ ngara+V+IV+Perf+Pst
 stand
 
 purtupula
-purtu+N+Pron/Clt+3Du+Subj
+purtu+Pcle+Pron/Clt+3Du+Subj
 ---
 in.vain
 
@@ -1921,7 +1921,7 @@ Wajinya+N+Prop
 Wakinya (name)
 
 Paji
-Paki+N+Prop
+Paji+N+Prop
 ---
 Paji (name)
 
@@ -2226,9 +2226,9 @@ na+Pcle
 then
 
 tiilaju
-tii+Dem+Pron/Clt+1Pl+Excl+Subj
+tii+Pcle+Pron/Clt+1Pl+Excl+Subj
 ---
-DEM
+this, there
 
 wanarnu
 wana+V+TV+Perf+Pst
@@ -2281,7 +2281,7 @@ ya+V+IV+Perf+Pst
 go
 
 purtu
-purtu+N
+purtu+Pcle
 ---
 in vain
 
@@ -2346,7 +2346,7 @@ ya+V+IV+Perf+Pst
 go
 
 purtulajura
-purtu+N+Pron/Clt+1Pl+Excl+Subj+Pron/Clt+3Sg+Dat
+purtu+Pcle+Pron/Clt+1Pl+Excl+Subj+Pron/Clt+3Sg+Dat
 ---
 in.vain
 
@@ -2391,7 +2391,7 @@ ya+V+IV+Perf+Pst
 go
 
 purtulajura
-purtu+N+Pron/Clt+1Pl+Excl+Subj+Pron/Clt+3Sg+Dat
+purtu+Pcle+Pron/Clt+1Pl+Excl+Subj+Pron/Clt+3Sg+Dat
 ---
 in.vain
 
