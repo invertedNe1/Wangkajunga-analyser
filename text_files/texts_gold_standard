@@ -121,7 +121,7 @@ ngarri+V+IV+Prs
 lie
 
 kaninkanin
-kanin+N+Sem/Spat+Redpl
+kanin+N+Spat+Redpl
 ---
 kanin
 
@@ -176,7 +176,7 @@ pu+V+TV+Perf+PstNar
 hit
 
 kaninjarraya
-kanin+N+Sem/Spat+Der/Asst+Pron/Clt+3Pl+Subj
+kanin+N+Spat+Der/Asst+Pron/Clt+3Pl+Subj
 ---
 down
 
@@ -381,7 +381,7 @@ palunyajanu+Pcle+Pron/Clt+3Pl+Subj
 afterthat
 
 yungunykujupa
-yunguny+N+Sem/Temp+Der/Anoth
+yunguny+N+Temp+Der/Anoth
 ---
 morning
 
@@ -646,7 +646,7 @@ nyukurni+N+Pron/Clt+3Pl+Subj
 before
 
 yulparrira
-yulparrira+N+Sem/Spat
+yulparrira+N+Spat
 ---
 south
 
@@ -1433,7 +1433,7 @@ pilyurr+N+Redpl+Loc
 steep
 
 kankani
-kankani+N+Sem/Spat
+kankani+N+Spat
 ---
 above
 
@@ -1633,7 +1633,7 @@ one
 one
 
 kakarrakujupa
-kakarra+N+Sem/Spat+Der/Anoth
+kakarra+N+Spat+Der/Anoth
 ---
 east
 
@@ -1648,12 +1648,12 @@ Morgan+N+Prop+Abl
 Morgan
 
 kakarramparni
-kakarra+N+Sem/Spat+Abl
+kakarra+N+Spat+Abl
 ---
 east
 
 yulparrimparni
-yulparri+N+Sem/Spat+Abl
+yulparri+N+Spat+Abl
 ---
 south
 
@@ -1807,7 +1807,7 @@ put.into+Perf+Pst
 ---
 
 kankani
-kankani+N+Sem/Spat
+kankani+N+Spat
 ---
 above
 
@@ -1851,7 +1851,7 @@ put.into+Perf+Pst+Pron/Clt+3Du+Subj
 ---
 
 kaniwana
-kani+N+Sem/Spat+Perl
+kani+N+Spat+Perl
 ---
 top
 
@@ -1861,7 +1861,7 @@ tie+V+IV+Perf+Pst+Pron/Clt+3Pl+Subj
 yirrpi
 
 kaniwana
-kani+N+Sem/Spat+Perl
+kani+N+Spat+Perl
 ---
 top
 
@@ -2311,7 +2311,7 @@ ya+V+IV+Perf+Pst+Pron/Clt+1Pl+Excl+Subj
 go
 
 kankani
-kankani+N+Sem/Spat
+kankani+N+Spat
 ---
 kankani
 
@@ -2336,7 +2336,7 @@ tirrirtika+V+IV+Perf+Pst
 descent
 
 kayililaju
-kayili+N+Sem/Spat+Pron/Clt+1Pl+Excl+Subj
+kayili+N+Spat+Pron/Clt+1Pl+Excl+Subj
 ---
 north
 

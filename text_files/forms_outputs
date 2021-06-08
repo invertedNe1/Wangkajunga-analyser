@@ -259,7 +259,9 @@ pu+V+TV+Perf+PstNar+Pron/Clt+3Sg+Abs
 pu+V+TV+Perf+PstNar+Pron/Clt+3Sg+Subj
 pu+V+TV+Perf+PstNar+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
-kaninjarraya+?
+kanin+N+Spat+Der/Asst+Pron/Clt+3Sg+Abs+Pron/Clt+3Pl+Subj
+kanin+N+Spat+Der/Asst+Pron/Clt+3Pl+Subj
+kanin+N+Spat+Der/Asst+Pron/Clt+3Pl+Subj+Pron/Clt+3Sg+Abs
 
 wirrupu+V+TV+Perf+Imprt
 wirrupu+V+TV+Perf+Imprt+Pron/Clt+3Sg+Abs
@@ -564,7 +566,10 @@ palunyajanu+Pcle+Pron/Clt+3Sg+Abs+Pron/Clt+3Pl+Subj
 palunyajanu+Pcle+Pron/Clt+3Pl+Subj
 palunyajanu+Pcle+Pron/Clt+3Pl+Subj+Pron/Clt+3Sg+Abs
 
-yunguny+N+Der/Anoth
+yunguny+N+Temp+Der/Anoth
+yunguny+N+Temp+Der/Anoth+Pron/Clt+3Sg+Abs
+yunguny+N+Temp+Der/Anoth+Pron/Clt+3Sg+Subj
+yunguny+N+Temp+Der/Anoth+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 ya+V+IV+Perf+Imprt+Pron/Clt+3Sg+Abs+Pron/Clt+3Pl+Subj
 ya+V+IV+Perf+Imprt+Pron/Clt+3Pl+Subj
@@ -1008,7 +1013,14 @@ nyukurni+N+Pron/Clt+3Sg+Abs+Pron/Clt+3Pl+Subj
 nyukurni+N+Pron/Clt+3Pl+Subj
 nyukurni+N+Pron/Clt+3Pl+Subj+Pron/Clt+3Sg+Abs
 
-yulparrira+N
+yulparri+N+Spat+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Dat
+yulparri+N+Spat+Pron/Clt+3Sg+Dat
+yulparri+N+Spat+Pron/Clt+3Sg+Dat+Pron/Clt+3Sg+Abs
+yulparri+N+Spat+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Dat
+yulparrira+N+Spat
+yulparrira+N+Spat+Pron/Clt+3Sg+Abs
+yulparrira+N+Spat+Pron/Clt+3Sg+Subj
+yulparrira+N+Spat+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 ngara+V+IV+Imperf+Imprt
 ngara+V+IV+Imperf+Imprt+Pron/Clt+3Sg+Abs
@@ -1645,6 +1657,10 @@ Kaningara+N+Prop+Sem/Plc+Abs+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Dat
 
 trip
 
@@ -1662,6 +1678,10 @@ Kaningara+N+Prop+Sem/Plc+Abs+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Dat
 
 really
 
@@ -2059,6 +2079,10 @@ Kaningara+N+Prop+Sem/Plc+Abs+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Dat
 
 road+N
 road+N+Abs
@@ -2359,7 +2383,10 @@ tali+N+Loc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 pilyurrpilyurrja+?
 
-kankani+N
+kankani+N+Spat
+kankani+N+Spat+Pron/Clt+3Sg+Abs
+kankani+N+Spat+Pron/Clt+3Sg+Subj
+kankani+N+Spat+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 highwanja+?
 
@@ -2631,7 +2658,10 @@ another
 
 one
 
-kakarra+N+Der/Anoth
+kakarra+N+Spat+Der/Anoth
+kakarra+N+Spat+Der/Anoth+Pron/Clt+3Sg+Abs
+kakarra+N+Spat+Der/Anoth+Pron/Clt+3Sg+Subj
+kakarra+N+Spat+Der/Anoth+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 yanga+Dem
 
@@ -3434,6 +3464,10 @@ Kaningara+N+Prop+Sem/Plc+Abs+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Abs
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj
 Kaningara+N+Prop+Sem/Plc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Abs+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Dat+Pron/Clt+3Sg+Abs
+kani+N+Spat+Clt/Foc+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Dat
 
 you
 
@@ -3514,7 +3548,10 @@ ya+V+IV+Perf+Pst+Clt/when+Pron/Clt+Refl+Pron/Clt+3Sg+Abs
 ya+V+IV+Perf+Pst+Clt/when+Pron/Clt+3Sg+Subj+Pron/Clt+1Sg+Dat
 ya+V+IV+Perf+Pst+Clt/when+Pron/Clt+3Sg+Subj+Pron/Clt+Refl
 
-kankani+N
+kankani+N+Spat
+kankani+N+Spat+Pron/Clt+3Sg+Abs
+kankani+N+Spat+Pron/Clt+3Sg+Subj
+kankani+N+Spat+Pron/Clt+3Sg+Subj+Pron/Clt+3Sg+Abs
 
 pamarrjalaju+?
 
@@ -3552,7 +3589,19 @@ malaku+N+Clt/when+Pron/Clt+3Sg+Subj+Pron/Clt+Refl
 
 tirrirtikanu+?
 
-kayililaju+?
+kayili+N+Spat+Pron/Clt+3Sg+Abs+Pron/Clt+1Pl+Excl+Subj
+kayili+N+Spat+Pron/Clt+1Pl+Excl+Subj
+kayili+N+Spat+Pron/Clt+1Pl+Excl+Subj+Pron/Clt+3Sg+Abs
+kayili+N+Spat+Pron/Clt+1Pl+Incl+Subj+Pron/Clt+1Sg+Dat
+kayili+N+Spat+Pron/Clt+1Pl+Incl+Subj+Pron/Clt+Refl
+kayili+N+Spat+Clt/when+Pron/Clt+3Sg+Abs+Pron/Clt+1Sg+Dat
+kayili+N+Spat+Clt/when+Pron/Clt+3Sg+Abs+Pron/Clt+Refl
+kayili+N+Spat+Clt/when+Pron/Clt+1Sg+Dat
+kayili+N+Spat+Clt/when+Pron/Clt+1Sg+Dat+Pron/Clt+3Sg+Abs
+kayili+N+Spat+Clt/when+Pron/Clt+Refl
+kayili+N+Spat+Clt/when+Pron/Clt+Refl+Pron/Clt+3Sg+Abs
+kayili+N+Spat+Clt/when+Pron/Clt+3Sg+Subj+Pron/Clt+1Sg+Dat
+kayili+N+Spat+Clt/when+Pron/Clt+3Sg+Subj+Pron/Clt+Refl
 
 ya+V+IV+Perf+Pst
 ya+V+IV+Perf+Pst+Pron/Clt+3Sg+Abs

@@ -1,0 +1,125 @@
+Documentation of changes to Wangkajunga texts (in my digitalisation of them)
+
+* only first letter of abreviations remains capitalised eg. ERG -> Erg, ALL -> All
+
+* elements joined with '+' (and not '-') in both directions
+	eg. ya-rra-ya -> ya+rra+ya
+	    go-NARPST-3plS -> go+NARPST+3plS
+
+* pronoun clitics given an extra tag +Pron/Clt and broken into respectively two or three parts:
+	eg. -3plS -> +Pron/Clt+3Pl+Subj
+	eg. -1plexO -> +Pron/Clt+1Pl+Excl+Obj
+  	* additionally, case names for these clitic parts are lengthened/adapted:
+		S -> Subj
+		O -> Abs (the "object" case is always absolutive, while "subject" can be either absolutive or ergative, depending on the transitivity of the verb)
+		D -> Dat
+	 	 -> Acs (accessory case can be locative or allative)
+		  -> Refl
+		ex -> +Excl
+		   -> +Incl
+	* Dual renamed from dl -> Du eg 3dlS -> +Pron/Clt+3Du+Subj
+
+* verb tags changed: Except for present, other tense tags are split to explicitly say if a verb tense is imperfective or perfective.
+	eg. ya-rra: go-NARPST -> go+Perf+PstNar
+	eg. wanin-ma: cut-PSTIMP -> cut+Imperf+Past
+	* some tag names altered:
+		NARPST -> Perf+PstNar
+		PSTIMP -> Imperf+Past
+		PSTHB -> Imperf+PstHbt
+
+* other tag changes:
+	RDP -> Redpl
+	POSS -> Gen
+	NOM -> Nomz (verb nominalisation)
+	A set of clitic particles given a longer tag:
+	PROB -> Clt/Prob
+	Derivative class of noun cases given longer names:
+	eg. HAV -> Der/Hav
+	eg. ASST -> Der/Asst
+	Demonstrative-specific case endings similarly given longer tag name:
+	eg. REL -> Dem/ngula
+* words joined by dots separated.
+	eg. Dolly.Snell (proper name) -> two entries: Dolly and Snell
+	* same for translated words
+		eg. minyuparnta: marsupial.mouse -> marsupial mouse
+		 
+* removed full stops and commas from the text
+
+* word given as xx-rra (gloss "go+NARPST") changed accordingly (appropriately) to ya-rra 
+
+* style effect removed; final vowel sometimes transcribed several times.
+	eg. waka-laaaa -> waka-la
+
+* some English or Kriol phrases are analysed together in the original, and here split up
+	eg. last week (one entry) -> last /n week (two entries)
+	* one 'compound' word represented with a dot: Roadboard.camp -> Road
+	#TODO: can there be a hyphen / dot?
+
+* phrase "not our roadhouse, another one" not given any analysis -> broken into individual English words with no affixes.
+
+* words given base tag (+N for nouns, +TV/IV for verbs, +Interj for interjection, +Pron+Interr for interrogative pronouns. (this could be extended / given more detail)
+#TODO: one word not analysed in 'gold standard'. layi:xx
+#TODO: PST(K) on 'deibin' not analysable (remove?)
+
+* some words with #TODOs from the texts, due to unseen grammatical features:
+ kawaku as suffix "as.well"
+ yiltakirliya #TODO: why can this start a word? one case of parra as well. Will this work in morph analyser?
+ minyirrilaju # TODO: affix as stem?
+ parrangulajura #TODO: affix as stem
+ nalaju #TODO affix FOC as stem
+ yungunypakanu #TODO: what is the correct analysis? Appears to be a compound noun
+ layi given analysis xx
+ suffix -nu given analysis ?: road.camp+pa+nu+laju #TODO: 1. why question mark? hyphen in road+camp
+road.camp+Pa+?+Pron/Clt+1Pl+Excl+Subj
+ watijunkutingu alternatively given analysis watijunku+V+TV+Act+Perf+Pst OR watijunku+V+TV+Irr+Act+Perf+Pst (the second of which won't generate in my analysis)
+ for several compound verbs the compound is given a single entry. eg takurlju = takurl + ju
+
+* notes on words which are incorrect, and why:
+round 1 not verbs
+ Redpl not working, Pa not working(!), Prs not working?? as.well not expected, 
+ pujikatu appearing as pukikatu?
+ palunyakurnungka	palunya+Dem+Gen+Loc	expected that Demonstrative can only have 1 semantic case (x2)
+ tiltilja tiltil+N+Loc	cons + Loc = ja (not ngka); not working in twolc
+ tilytilja - same as tiltilja
+ board.u.lu - what is 'u'?
+ kartiyatu - twolc not working for alt. erg form tu. Same Barrylu.
+ yaun (not yanu)
+ roadhouse-ngutu (nguru expected)
+ jii-ngka-wu -> wu noted as EMPH, when expected VOC. Several expected EMPH forms, wu is not one of them. 
+ ngayu-n-ja-lanya-juya - ja not alternative LOC form of ngka (as twolc not working)
+ +N+Spat nouns unexpected alternative ablative form -mparni. Unexpected PERL semantic case
+pitingkangula. Ngula is given as relative with yangka - here somehow on noun piti (hole)
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
