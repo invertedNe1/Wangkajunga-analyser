@@ -88,8 +88,13 @@ round 1 not verbs
  jii-ngka-wu -> wu noted as EMPH, when expected VOC. Several expected EMPH forms, wu is not one of them. 
  ngayu-n-ja-lanya-juya - ja not alternative LOC form of ngka (as twolc not working)
  +N+Spat nouns unexpected alternative ablative form -mparni. Unexpected PERL semantic case
-pitingkangula. Ngula is given as relative with yangka - here somehow on noun piti (hole)
-  
+ pitingkangula. Ngula is given as relative with yangka - here somehow on noun piti (hole)
+round 2 verbs
+ kanyin-mana-ya. mana 'given' as PSTIMP, expected just ma.
+ ngarrin. vowel-deletion not implemented in twolc -> ngarri +Prs is producing ngarri-in..
+ ngarrinmapula. IMP+PSTHBT. expected would be ngarri-ma-pula x2
+ nyakutimaraya. ti ACT has wrong flag (U.WA) should be different letter - now make it WA conj. can fix? think not.
+ wakala. +Pron/Clt+3Pl+Subj - would expect 'la' not nothing
 
 
 
@@ -120,6 +125,9 @@ pitingkangula. Ngula is given as relative with yangka - here somehow on noun pit
 
 
 
- 
- 
+
+
+
+
+
 

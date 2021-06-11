@@ -3,6 +3,7 @@
 from os import path
 import subprocess
 import sys
+from collections import Counter
 
 
 def split_tags(gold_standard):
@@ -127,7 +128,8 @@ if __name__ == '__main__':
             line = f.readline()  # skip line that is ---
             line = f.readline()
             translation = line.strip()
-            word_entries.append([form, lemma, tag, num_markers, properly_split_gold_standard, translation, gold_standard])
+            correct = False
+            word_entries.append([form, lemma, tag, num_markers, properly_split_gold_standard, translation, gold_standard, correct])
         else:
             pass
     # for marker in temp_list_possible_markers:
@@ -207,6 +209,7 @@ if __name__ == '__main__':
     eng_or_creole_correct = 0
     eng_or_creole_overgeneration = 0
     eng_or_creole_overgeneration_correct = 0
+    # working with how close incorrect guesses are..
     incorrect_number_affixes = 0
     incorrect_number_correctly_guessed_affixes = 0
     incorrect_overgeneration_guessed_affixes = 0
@@ -248,15 +251,15 @@ if __name__ == '__main__':
             eng_or_creole_total += 1
             eng_or_creole_overgeneration += len(outputs)
 
-        if 'VTV' in word[4]:
-            pass
-
         correct = False  # tracker to see if there is a matching form
+        output_contains_question_mark = False
         most_correct_output_so_far = None
         most_correct_num_correct_tags = 0
         most_correct_num_total_tags = 0
         total_tags = len(word[4])
         for output in outputs:
+            if '?' in output:
+                output_contains_question_mark = True
             split_output, lemma, tag = split_tags(output)
             correct_tags = 0
             total_output_tags = len(split_output)
@@ -273,6 +276,7 @@ if __name__ == '__main__':
                 most_correct_num_total_tags = total_output_tags
             if output == word[6]:
                 correct = True
+                word[7] = True
                 total_correct += 1
                 total_overgeneration_correct += len(outputs)
                 if word[2] == 'N':
@@ -305,13 +309,14 @@ if __name__ == '__main__':
                 # if word[2] == 'Dem':
                 #     print("no matching forms for: " + word[0] + "\t" + word[6] + '\t' + output)
         # print(str(word[4]))
-        if not correct:  # and most_correct_num_correct_tags > 0
+        if not correct:  # and not output_contains_question_mark # and most_correct_num_correct_tags > 0
             most_correct_form_matchable_count += 1
             incorrect_number_affixes += total_tags
             incorrect_number_correctly_guessed_affixes += most_correct_num_correct_tags
             incorrect_overgeneration_guessed_affixes += most_correct_num_total_tags
             print("no matching forms for: " + word[0] + '\t' + word[6] + '\t' + str(word[4]))
-    # # print analysis
+
+    # print analysis
     print('total: ' + str(total))
     print('total correct: ' + str(total_correct) + '\t' + '(' + str(round(total_correct/total*100, 2)) + '%)')
     print('total overgeneration avg: ' + str(round(total_overgeneration/total, 2)))
@@ -361,3 +366,150 @@ if __name__ == '__main__':
     print('incorrect number affixes: ' + str(incorrect_number_affixes))
     print('incorrect overgeneration guessed affixes: ' + str(incorrect_overgeneration_guessed_affixes))
     print('most correct matchable forms: ' + str(most_correct_form_matchable_count))
+    # len(set(item[0] for item in word_entries))
+
+    # stats on distinct forms / lemmas (probably clumsy way)
+    # distinct form variables
+    distinct_forms = set()
+    distinct_forms_correct = 0
+    distinct_lemmas = set()
+    distinct_lemmas_correct = 0
+    distinct_noun_forms = set()
+    distinct_noun_forms_correct = 0
+    distinct_noun_lemmas = set()
+    distinct_noun_lemmas_correct = 0
+    distinct_verb_forms = set()
+    distinct_verb_forms_correct = 0
+    distinct_verb_lemmas = set()
+    distinct_verb_lemmas_correct = 0
+    distinct_particle_forms = set()
+    distinct_particle_forms_correct = 0
+    distinct_particle_lemmas = set()
+    distinct_particle_lemmas_correct = 0
+    distinct_interj_forms = set()
+    distinct_interj_forms_correct = 0
+    distinct_interj_lemmas = set()
+    distinct_interj_lemmas_correct = 0
+    distinct_conj_forms = set()
+    distinct_conj_forms_correct = 0
+    distinct_conj_lemmas = set()
+    distinct_conj_lemmas_correct = 0
+    distinct_dem_forms = set()
+    distinct_dem_forms_correct = 0
+    distinct_dem_lemmas = set()
+    distinct_dem_lemmas_correct = 0
+    distinct_pronoun_forms = set()
+    distinct_pronoun_forms_correct = 0
+    distinct_pronoun_lemmas = set()
+    distinct_pronoun_lemmas_correct = 0
+    distinct_eng_creole_forms = set()
+    distinct_eng_creole_forms_correct = 0
+    distinct_eng_creole_lemmas = set()
+    distinct_eng_creole_lemmas_correct = 0
+
+    for word in word_entries:
+        correct = word[7]
+        if word[0] not in distinct_forms:
+            if correct:
+                distinct_forms_correct += 1
+            distinct_forms.add(word[0])
+        if word[0] not in distinct_lemmas:
+            if correct:
+                distinct_lemmas_correct += 1
+            distinct_lemmas.add(word[1])
+        if word[2] == 'N':
+            if word[0] not in distinct_noun_forms:
+                if correct:
+                    distinct_noun_forms_correct += 1
+                distinct_noun_forms.add(word[0])
+            if word[0] not in distinct_noun_lemmas:
+                if correct:
+                    distinct_noun_lemmas_correct += 1
+                distinct_noun_lemmas.add(word[1])
+        elif word[2] == 'V':
+            if word[0] not in distinct_verb_forms:
+                if correct:
+                    distinct_verb_forms_correct += 1
+                distinct_verb_forms.add(word[0])
+            if word[0] not in distinct_verb_lemmas:
+                if correct:
+                    distinct_verb_lemmas_correct += 1
+                distinct_verb_lemmas.add(word[1])
+        elif word[2] == 'Pcle':
+            if word[0] not in distinct_particle_forms:
+                if correct:
+                    distinct_particle_forms_correct += 1
+                distinct_particle_forms.add(word[0])
+            if word[0] not in distinct_particle_lemmas:
+                if correct:
+                    distinct_particle_lemmas_correct += 1
+                distinct_particle_lemmas.add(word[1])
+        elif word[2] == 'Interj':
+            if word[0] not in distinct_interj_forms:
+                if correct:
+                    distinct_interj_forms_correct += 1
+                distinct_interj_forms.add(word[0])
+            if word[0] not in distinct_interj_lemmas:
+                if correct:
+                    distinct_interj_lemmas_correct += 1
+                distinct_interj_lemmas.add(word[1])
+        elif word[2] == 'CC':
+            if word[0] not in distinct_conj_forms:
+                if correct:
+                    distinct_conj_forms_correct += 1
+                distinct_conj_forms.add(word[0])
+            if word[0] not in distinct_conj_lemmas:
+                if correct:
+                    distinct_conj_lemmas_correct += 1
+                distinct_conj_lemmas.add(word[1])
+        elif word[2] == 'Dem':
+            if word[0] not in distinct_dem_forms:
+                if correct:
+                    distinct_dem_forms_correct += 1
+                distinct_dem_forms.add(word[0])
+            if word[0] not in distinct_dem_lemmas:
+                if correct:
+                    distinct_dem_lemmas_correct += 1
+                distinct_dem_lemmas.add(word[1])
+        elif word[2] == 'Pron':
+            if word[0] not in distinct_pronoun_forms:
+                if correct:
+                    distinct_pronoun_forms_correct += 1
+                distinct_pronoun_forms.add(word[0])
+            if word[0] not in distinct_pronoun_lemmas:
+                if correct:
+                    distinct_pronoun_lemmas_correct += 1
+                distinct_pronoun_lemmas.add(word[1])
+        elif word[2] is None:
+            if word[0] not in distinct_eng_creole_forms:
+                if correct:
+                    distinct_eng_creole_forms_correct += 1
+                distinct_eng_creole_forms.add(word[0])
+            if word[0] not in distinct_eng_creole_lemmas:
+                if correct:
+                    distinct_eng_creole_lemmas_correct += 1
+                distinct_eng_creole_lemmas.add(word[1])
+    # print statements for distinct forms:
+    print('number distinct forms: ' + str(len(distinct_forms)) + '\t' + 'of which correct: ' + str(distinct_forms_correct))
+    print('number distinct lemmas: ' + str(len(distinct_lemmas)))
+    print('number distinct noun forms: ' + str(len(distinct_noun_forms)) + '\t' + 'of which correct: ' + str(
+        distinct_noun_forms_correct))
+    print('number distinct noun lemmas: ' + str(len(distinct_noun_lemmas)))
+    print('number distinct verb forms: ' + str(len(distinct_verb_forms)) + '\t' + 'of which correct: ' + str(
+        distinct_verb_forms_correct))
+    print('number distinct verb lemmas: ' + str(len(distinct_verb_lemmas)))
+    print('number distinct particle forms: ' + str(len(distinct_particle_forms)) + '\t' + 'of which correct: ' + str(
+        distinct_particle_forms_correct))
+    print('number distinct particle lemmas: ' + str(len(distinct_particle_lemmas)))
+    print('number distinct conjunction forms: ' + str(len(distinct_conj_forms)) + '\t' + 'of which correct: ' + str(
+        distinct_conj_forms_correct))
+    print('number distinct conjunction lemmas: ' + str(len(distinct_conj_lemmas)))
+    print('number distinct demonstrative forms: ' + str(len(distinct_dem_forms)) + '\t' + 'of which correct: ' + str(
+        distinct_dem_forms_correct))
+    print('number distinct demonstrative lemmas: ' + str(len(distinct_dem_lemmas)))
+    print('number distinct pronoun forms: ' + str(len(distinct_pronoun_forms)) + '\t' + 'of which correct: ' + str(
+        distinct_pronoun_forms_correct))
+    print('number distinct pronoun lemmas: ' + str(len(distinct_pronoun_lemmas)))
+    print('number distinct eng/creole forms: ' + str(len(distinct_eng_creole_forms)) + '\t' + 'of which correct: ' + str(
+        distinct_eng_creole_forms_correct))
+    print('number distinct eng/creole lemmas : ' + str(len(distinct_eng_creole_lemmas)))
